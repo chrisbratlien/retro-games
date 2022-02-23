@@ -50,6 +50,7 @@
 
   MountainLine.prototype = {
     draw: function(screen) {
+      screen.strokeStyle = 'magenta';
       drawLine(screen, this, 1);
     }
   };
@@ -114,6 +115,7 @@
 
     draw: function(screen) {
       this.allLines().forEach(function(l) {
+        screen.strokeStyle = 'lightgreen';
         drawLine(screen, l, 1);
       });
     },
