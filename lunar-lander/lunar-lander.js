@@ -203,7 +203,7 @@
       return keyState[keyCode] === true;
     };
 
-    this.KEYS = { LEFT: 37, RIGHT: 39, UP: 38, DOWN: 40 };
+    this.KEYS = { LEFT: 37, RIGHT: 39, UP: 38, DOWN: 40, SPACE: 32 };
   };
 
   var drawLine = function(screen, line, lineWidth) {
@@ -311,4 +311,13 @@
   window.addEventListener('load', function() {
     new Game();
   });
+  window.addEventListener('keyup',function(e){
+    ///console.log('e',e);
+    if (e.code == 'Space'){
+      return new Game();
+    }
+
+  });
+
+
 })(this);
